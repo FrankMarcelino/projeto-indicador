@@ -1,0 +1,72 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* principal */
+
+body {
+    background-color: black;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    margin: 0 30px;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.assistencia-salao {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+h2 {
+    margin: 10px;
+    text-align: center;
+}
+
+.contador {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+button {
+    border: none;
+}
+
+input {
+    text-align: center;
+}
+
+.bi {
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    color: aliceblue;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+#menos {
+    background-color: red;
+   
+}
+
+#mais {
+    background-color: forestgreen;
+}
