@@ -58,6 +58,12 @@ option {
 }
 
 
+#assistencia-salao-input {
+    background-color: aliceblue;
+    padding: 15px;
+    color: black;
+    border-radius: 5px;
+}
 
 h2 {
     margin: 10px;
