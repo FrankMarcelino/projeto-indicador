@@ -150,3 +150,11 @@ p {
 .assistencia-zoom input {
     width: 30px;
 }
+
+button.resultado {
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: bolder;
+}
