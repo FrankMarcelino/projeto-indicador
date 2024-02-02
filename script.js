@@ -95,6 +95,11 @@ function resultado() {
    multiplica()
 }
 
+let resultadosArray = 0
+
+
+
+
 
 
 

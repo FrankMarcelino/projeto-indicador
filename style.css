@@ -158,3 +158,15 @@ button.resultado {
     margin: 10px;
     font-weight: bolder;
 }
+
+.total-assistencia-text {
+    display: block;
+    height: 300px;
+    width: 350px;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+
+.enviar-copiar {
+    display: flex;
+}
