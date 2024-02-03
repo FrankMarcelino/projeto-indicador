@@ -7,10 +7,7 @@ const dataFormatada = data.toLocaleString('pt-BR'); // data no formato brasileir
 const apenasData = dataFormatada.substring(0, 10)
 var nomeDoDia = data.toLocaleString('pt-BR', { weekday: 'long' }); // nome do dia em português
 
-
 diplayData.innerText = `Hoje é ${nomeDoDia} ${apenasData}`
-
-
 
 // assistencia salão
 const botaoMenos = document.getElementById('menos')
@@ -40,7 +37,7 @@ function somar() {
 
 function salvarAssistenciaSalao() {
     assistenciaSalaoSalva = assistenciaSalao
-    totalSalao.innerText = `Total:${assistenciaSalaoSalva}`
+    totalSalao.innerText = `Total = ${assistenciaSalaoSalva}`
     console.log(assistenciaSalaoSalva)
 }
 
@@ -86,25 +83,23 @@ function resultado() {
     totalZoom.innerText = `Total zoom = ${resultadoSomaZoom}`
 }
 
-
-
-
 botaoResultado.addEventListener('click', resultado)
 
-
-
-
-
-
-
-// ===========================================
+// ===================total geral  ========================
 const totalGeral = document.getElementById('total-geral')
 let totalAssistencia = 0
+
 
 function somaTudo() {
     totalAssistencia =  assistenciaSalaoSalva + resultadoSomaZoom
     totalGeral.innerText = `Total: ${totalAssistencia}`
 }
+
+// -----------texto padrão -------
+
+
+
+
 
 const loop = () => {
     clearInterval(loopId)
@@ -120,4 +115,5 @@ loop()
 
 
 
-// botaoResultadoZoom.addEventListener('click', mostrarResultado)
+
+
