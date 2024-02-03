@@ -1,0 +1,205 @@
+/*-----oçamento------*/
+
+
+
+
+
+.orcamento-conteudo {
+    display: none;
+}
+
+
+
+#bikcraft:checked ~ #orcamento-bikcraft,
+#seguro:checked ~ #orcamento-seguro {
+    display: grid;
+    gap: 20px;
+}
+
+
+
+
+
+
+/* css novo */
+
+
+
+
+
+
+/* ccs antigo */
+
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* principal */
+
+body {
+    background-color: black;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    margin: 0 30px;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 25px;
+}
+/* reuniao */
+ 
+.container-reuniao {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+option {
+    height: 20px;
+    font-size: 20px;
+}
+
+.data {
+    background-color: aliceblue;
+    color: black;
+    width: 280px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* assistencia salão */
+.assistencia-salao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+
+#assistencia-salao-input {
+    background-color: aliceblue;
+    padding: 15px;
+    color: black;
+    border-radius: 5px;
+}
+
+h2 {
+    margin: 10px;
+    text-align: center;
+}
+
+.contador-salao {
+    display: flex;
+    max-width: 150px;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.contador-salao input {
+    width: 50px;
+    font-size: 20px;
+}
+
+button {
+    border: none;
+}
+
+input {
+    text-align: center;
+}
+
+.bi {
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    color: aliceblue;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+#menos {
+    background-color: red;
+   
+}
+
+#mais {
+    background-color: forestgreen;
+}
+
+.bi-check-circle  {
+    
+}
+
+button.bi-check-circle {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    width: 150px;
+    text-align: center;
+    color: black;
+    margin: 10px;
+    padding-left: 20px;
+}
+
+/* assistencia zoom */
+
+.assistencia-zoom {
+    background-color: rgb(128, 128, 128);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+p {
+    margin: 10px;
+}
+
+.contador-zoom {
+    display: flex;
+    flex-direction: column;
+}
+
+.assistencia-zoom input {
+    width: 30px;
+}
+
+button.resultado {
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: bolder;
+}
+
+.total-assistencia-text {
+    display: block;
+    height: 300px;
+    width: 350px;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+
+.enviar-copiar {
+    display: flex;
+}
