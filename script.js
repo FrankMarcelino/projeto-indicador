@@ -22,6 +22,7 @@ let assistenciaSalaoSalva = 0
 
 function mostrarAssistencia() {
     assistenciaSalaoInput.innerText = assistenciaSalao
+    
 }
 
 mostrarAssistencia()

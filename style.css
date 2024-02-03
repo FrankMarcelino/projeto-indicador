@@ -70,10 +70,13 @@ option {
 
 
 #assistencia-salao-input {
+    display: block;
     background-color: aliceblue;
     padding: 15px;
     color: black;
     border-radius: 5px;
+    width: 50px;
+    text-align: right;
 }
 
 h2 {
