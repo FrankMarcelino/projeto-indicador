@@ -5,8 +5,11 @@ const diplayData = document.getElementById('data')
 const data = new Date(); // data atual
 const dataFormatada = data.toLocaleString('pt-BR'); // data no formato brasileiro
 const apenasData = dataFormatada.substring(0,10)
+var nomeDoDia = data.toLocaleString('pt-BR', {weekday: 'long'}); // nome do dia em português
 
-diplayData.innerText = apenasData
+
+diplayData.innerText = `Hoje é ${nomeDoDia} ${apenasData}`
+
 
 
 // assistencia salão
@@ -51,7 +54,7 @@ const inputX4 = document.querySelector('#x4')
 const inputX5 = document.querySelector('#x5')
 const inputX6 = document.querySelector('#x6')
 
-console.log(Number(inputX1.value))
+
 
 let resultadoX1 = 0
 let resultadoX2 = 0

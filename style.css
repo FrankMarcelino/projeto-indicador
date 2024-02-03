@@ -109,7 +109,7 @@ input {
 #menos {
     background-color: red;
     display: block;
-    width: 150px;
+    width: 100px;
     border-radius: 15px;
     position: relative;
 }
@@ -117,11 +117,11 @@ input {
 #menos::before{
     content: '';
     height: 10px;
-    width: 50px;
+    width: 35px;
     background: white;
     position: absolute;
     top: calc(50% - 5px);
-    right: 50px;
+    right: 33px;
 }
 
 #mais {
