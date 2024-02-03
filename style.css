@@ -1,6 +1,6 @@
 /* reset */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -35,8 +35,9 @@ h3 {
     text-align: center;
     margin: 5px;
 }
+
 /* reuniao */
- 
+
 .container-reuniao {
     display: flex;
     flex-direction: column;
@@ -90,13 +91,8 @@ h2 {
     margin-top: 10px;
 }
 
-
 button {
     border: none;
-}
-
-input {
-    text-align: center;
 }
 
 .bi {
@@ -117,7 +113,7 @@ input {
     position: relative;
 }
 
-#menos::before{
+#menos::before {
     content: '';
     height: 10px;
     width: 35px;
@@ -136,7 +132,7 @@ input {
 }
 
 #mais::before,
-#mais::after{
+#mais::after {
     content: '';
     height: 10px;
     width: 50px;
@@ -151,16 +147,27 @@ input {
 }
 
 
+.container-salvar {
+    display: flex;
+    width: 320px;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
 button.bi-check-circle {
     display: flex;
     align-items: center;
-    align-content: center;
     gap: 10px;
-    width: 150px;
+    width: 130px;
     text-align: center;
     color: black;
-    margin: 10px;
     padding-left: 20px;
+}
+
+.total-salao {
+    width: 150px;
+    font-weight: bolder;
+    font-size: 30px;
 }
 
 /* assistencia zoom */
@@ -211,19 +218,19 @@ button.resultado {
 
 
 
-.container-abas input:checked + label::before {
+.container-abas input:checked+label::before {
     border-color: blue;
     box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 6px blue;
-} 
+}
 
 
 .container-abas label span {
     display: none;
 }
 
-.container-abas input:checked + label span {
+.container-abas input:checked+label span {
     display: inline-block;
-} 
+}
 
 
 .container-abas input:checked+label {
@@ -235,7 +242,7 @@ button.resultado {
     grid-column: 1/-1;
 }
 
-.container-abas > label {
+.container-abas>label {
     grid-column: initial;
 }
 
@@ -248,7 +255,7 @@ button.resultado {
 }
 
 
-.container-abas input:checked + label + .orcamento-detalhes {
+.container-abas input:checked+label+.orcamento-detalhes {
     display: grid;
 }
 
@@ -259,8 +266,8 @@ button.resultado {
     display: none;
 }
 
-#salao:checked ~ #contagem-salao,
-#zoom:checked ~ #contagem-zoom {
+#salao:checked~#contagem-salao,
+#zoom:checked~#contagem-zoom {
     display: grid;
     gap: 20px;
 }
@@ -276,7 +283,7 @@ button.resultado {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-} 
+}
 
 .container-abas>label::before {
     content: "";
@@ -287,8 +294,3 @@ button.resultado {
     border-radius: 50%;
     margin-right: 8px;
 }
- 
-
-
-
-

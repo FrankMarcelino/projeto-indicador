@@ -15,8 +15,9 @@ diplayData.innerText = `Hoje é ${nomeDoDia} ${apenasData}`
 // assistencia salão
 const botaoMenos = document.getElementById('menos')
 const botaoMais = document.getElementById('mais')
-const botaoConcluir = document.getElementById('concluir')
+const botaoSalvar = document.getElementById('salvar')
 let assistenciaSalaoInput = document.getElementById('assistencia-salao-input')
+const totalSalao = document.getElementById('total-salao')
 let assistenciaSalao = 0
 let assistenciaSalaoSalva = 0
 
@@ -39,12 +40,13 @@ function somar() {
 
 function salvarAssistenciaSalao() {
     assistenciaSalaoSalva = assistenciaSalao
+    totalSalao.innerText = `Total:${assistenciaSalaoSalva}`
     console.log(assistenciaSalaoSalva)
 }
 
 botaoMenos.addEventListener('click', diminuir)
 botaoMais.addEventListener('click', somar)
-botaoConcluir.addEventListener('click', salvarAssistenciaSalao)
+botaoSalvar.addEventListener('click', salvarAssistenciaSalao)
 
 // assistencia Zoom
 
