@@ -97,6 +97,15 @@ function somaTudo() {
 
 // -----------texto padrão -------
 
+const dataTexto = document.getElementById('text-data')
+const textoTotalSalao = document.getElementById('text-total-salao')
+const textoTotalZoom = document.getElementById('text-total-zoom')
+const textoTotalGeral = document.getElementById('text-total-geral')
+
+dataTexto.innerText = `Hoje é ${nomeDoDia} ${apenasData}`
+textoTotalSalao.innerText = `Total salão do reino = ${assistenciaSalaoSalva}`
+textoTotalZoom.innerText = `Total zoom = ${resultadoSomaZoom}`
+textoTotalGeral.innerText = `Total: ${totalAssistencia}`
 
 
 
