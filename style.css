@@ -38,6 +38,12 @@ h3 {
 
 /* reuniao */
 
+.container-selecione-reuniao-total {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
 .container-reuniao {
     display: flex;
     flex-direction: column;
@@ -56,6 +62,15 @@ option {
     padding: 5px;
     border-radius: 5px;
     text-align: center;
+}
+
+/* total geral */
+.total-geral {
+    width: 100px;
+    padding: 3px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
 }
 
 /* assistencia salão */

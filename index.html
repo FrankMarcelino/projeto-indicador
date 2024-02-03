@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova versão</title>
+    <title>Contagem Assistência</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="./script.js" defer></script>
@@ -15,10 +15,13 @@
         <div class="container-reuniao">
             <P class="data" id="data"></P>
             <h3>Selecione a Reunião</h3>
-            <select name="" id="reuniao" class="reuniao">
-                <option value="meio">Renião de Meio de Semana</option>
-                <option value="fim">Reunião de Fim de Semana</option>
-            </select>
+            <div class="container-selecione-reuniao-total">
+                <select name="" id="reuniao" class="reuniao">
+                    <option value="meio">Renião de Meio de Semana</option>
+                    <option value="fim">Reunião de Fim de Semana</option>
+                </select>
+                <div id="total-geral" class="total-geral">Total:0</div>
+            </div>
 
         </div>
 

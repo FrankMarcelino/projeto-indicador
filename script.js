@@ -104,7 +104,11 @@ function resultado() {
 
 let resultadosArray = 0
 
+const totalGeral = document.getElementById('total-geral')
 
+function somaTudo() {
+    totalGeral.innerText = `Total: ${assistenciaSalaoSalva}`
+}
 
 
 
@@ -116,6 +120,7 @@ let resultadosArray = 0
 const loop = () => {
     clearInterval(loopId)
     resultado ()
+    somaTudo()
     loopId = setTimeout(() => {
         loop()
     }, 300)
