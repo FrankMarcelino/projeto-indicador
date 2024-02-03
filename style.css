@@ -203,8 +203,9 @@ p {
     flex-direction: column;
 }
 
-.assistencia-zoom input {
-    width: 30px;
+.zoom-input {
+    font-size: 18px;
+    width: 50px;
 }
 
 button.resultado {
