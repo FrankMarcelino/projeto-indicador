@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="./script.js" defer></script>
+    <title>Contador de Assistência | Online</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculadora da Assistência</h1>
+        <div class="container-reuniao">
+            <P class="data" id="data"></P>
+            <select name="" id="reuniao" class="reuniao">
+                <option value="meio">Renião de Meio de Semana</option>
+                <option value="fim">Reunião de Fim de Semana</option>
+            </select>
+
+        </div>
+
+        <div class="assistencia-salao">
+            <h2>Assistência Salão</h2>
+            <div class="contador-salao">
+                <button id="menos" class="bi bi-dash-circle"></button>
+                <p id="assistencia-salao-input"></p>
+                <button id="mais" class="bi bi-plus-circle"></button>
+            </div>
+            <button id="concluir" class="bi bi-check-circle">concluir</button>
+        </div>
+        <div class="assistencia-zoom">
+            <h2>Assistência Zoom</h2>
+            <div class="contador-zoom">
+                <p>Respostas da enquete:</p>
+                <div>
+                    <input id="x1" type="number">
+                    <label id="l1" for="text">x 1 = 0</label>
+                </div>
+
+                <div>
+                    <input  id="x2" type="number">
+                    <label id="l2" for="text">x 2 = 0</label>
+                </div>
+
+                <div>
+                    <input  id="x3" type="number">
+                    <label id="l3" for="text">x 3 = 0</label>
+                </div>
+
+                <div>
+                    <input  id="x4" type="number">
+                    <label id="l4" for="text">x 4 = 0</label>
+                </div>
+
+                <div>
+                    <input  id="x5" type="number">
+                    <label id="l5" for="text">x 5 = 0</label>
+                </div>
+
+                <div>
+                    <input  id="x6" type="number">
+                    <label id="l6" for="text">x 6 = 0</label>
+                </div>
+                <button id="resultado" class="resultado">Resultado Zoom</button>
+                <P id="total-zoom">Total: 0</P>
+            </div>
+        </div>
+        <div class="Total da assistência">
+            <h2>Total da assistência</h2>
+            <div class="total-assistencia-text">
+                
+            </div>
+            <div class="enviar-copiar">
+                <button id="concluir" class="bi bi-check-circle">Enviar</button>
+                <button id="concluir" class="bi bi-check-circle">copiar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
