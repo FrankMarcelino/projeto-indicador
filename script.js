@@ -102,12 +102,16 @@ const textoTotalSalao = document.getElementById('text-total-salao')
 const textoTotalZoom = document.getElementById('text-total-zoom')
 const textoTotalGeral = document.getElementById('text-total-geral')
 
-dataTexto.innerText = `Hoje é ${nomeDoDia} ${apenasData}`
-textoTotalSalao.innerText = `Total salão do reino = ${assistenciaSalaoSalva}`
-textoTotalZoom.innerText = `Total zoom = ${resultadoSomaZoom}`
-textoTotalGeral.innerText = `Total: ${totalAssistencia}`
+const botaoGerarTexto = document.querySelector('.gerar-texto')
 
+function gerarTexto() {
+    dataTexto.innerText = `Hoje é ${nomeDoDia} ${apenasData}`
+    textoTotalSalao.innerText = `Total salão do reino = ${assistenciaSalaoSalva}`
+    textoTotalZoom.innerText = `Total zoom = ${resultadoSomaZoom}`
+    textoTotalGeral.innerText = `Total: ${totalAssistencia}`
+}
 
+botaoGerarTexto.addEventListener('click', gerarTexto)
 
 
 const loop = () => {

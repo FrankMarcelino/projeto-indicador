@@ -316,6 +316,14 @@ button.resultado {
     margin-top: 10px;
 }
 
+.gerar-texto {
+    padding: 15px;
+    background-color: green;
+    font-weight: bolder;
+    border-radius: 15px;
+    margin: 5px;
+}
+
 .texto-padrao {
     display: flex;
     width: 350px;
