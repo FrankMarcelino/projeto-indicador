@@ -48,6 +48,7 @@ option {
     width: 280px;
     padding: 15px;
     border-radius: 5px;
+    text-align: center;
 }
 
 /* assistencia salão */

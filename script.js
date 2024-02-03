@@ -4,9 +4,10 @@ const diplayData = document.getElementById('data')
 
 const data = new Date(); // data atual
 const dataFormatada = data.toLocaleString('pt-BR'); // data no formato brasileiro
+const apenasData = dataFormatada.substring(0,10)
 
+diplayData.innerText = apenasData
 
-diplayData.innerText = dataFormatada
 
 // assistencia salão
 const botaoMenos = document.getElementById('menos')
