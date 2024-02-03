@@ -83,7 +83,6 @@ h2 {
 
 .contador-salao {
     display: flex;
-    max-width: 150px;
     justify-content: space-between;
     margin-top: 10px;
 }
@@ -109,12 +108,43 @@ input {
 
 #menos {
     background-color: red;
-   
+    display: block;
+    width: 150px;
+    border-radius: 15px;
+    position: relative;
+}
+
+#menos::before{
+    content: '';
+    height: 10px;
+    width: 50px;
+    background: white;
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 50px;
 }
 
 #mais {
     background-color: forestgreen;
-    
+    display: block;
+    width: 150px;
+    border-radius: 15px;
+    position: relative;
+}
+
+#mais::before,
+#mais::after{
+    content: '';
+    height: 10px;
+    width: 50px;
+    background: white;
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 50px;
+}
+
+#mais::after {
+    transform: rotate(90deg);
 }
 
 
