@@ -5,9 +5,25 @@ const diplayData = document.getElementById('data')
 const data = new Date(); // data atual
 const dataFormatada = data.toLocaleString('pt-BR'); // data no formato brasileiro
 const apenasData = dataFormatada.substring(0, 10)
-var nomeDoDia = data.toLocaleString('pt-BR', { weekday: 'long' }); // nome do dia em português
+let nomeDoDia = data.toLocaleString('pt-BR', { weekday: 'long' }); // nome do dia em português
 
-diplayData.innerText = `${nomeDoDia} ${apenasData}`
+diplayData.innerText = `${capitalizeFirstLetter(nomeDoDia)} ${apenasData}`
+
+// ultilidades
+
+function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function ajustadoEncodeURIComponent(str) {
+    return encodeURIComponent(str).replace(/[!' ()*]/g, function (c) {
+        return "%" + c.charCodeAt(0).toString(16);
+    });
+}
+
+
+
+// ======
 
 // assistencia salão
 const botaoMenos = document.getElementById('menos')
@@ -70,7 +86,7 @@ function multiplica() {
 let resultadoSomaZoom = 0
 
 function somaArray() {
-    resultadoX.forEach((e,i) =>{
+    resultadoX.forEach((e, i) => {
         resultadoSomaZoom += resultadoX[i]
     })
 }
@@ -91,7 +107,7 @@ let totalAssistencia = 0
 
 
 function somaTudo() {
-    totalAssistencia =  assistenciaSalaoSalva + resultadoSomaZoom
+    totalAssistencia = assistenciaSalaoSalva + resultadoSomaZoom
     totalGeral.innerText = `Total: ${totalAssistencia}`
 }
 
@@ -105,19 +121,32 @@ const textoTotalGeral = document.getElementById('text-total-geral')
 const botaoGerarTexto = document.querySelector('.gerar-texto')
 
 function gerarTexto() {
-    dataTexto.innerText = `${nomeDoDia} ${apenasData}`
+    dataTexto.innerText = `${capitalizeFirstLetter(nomeDoDia)} ${apenasData}`
     textoTotalSalao.innerText = `Total salão do reino = ${assistenciaSalaoSalva}`
     textoTotalZoom.innerText = `Total zoom = ${resultadoSomaZoom}`
     textoTotalGeral.innerText = `Total: ${totalAssistencia}`
 }
 
-botaoGerarTexto.addEventListener('click', gerarTexto)
+// enviar via whatsapp
+
+let textoPadrao = `Olá, segue infomrações sobre assistencia da ${nomeDoDia,apenasData}`
+let textoCodificado = encodeURIComponent(textoPadrao)
+
+function abrirWhatsApp() {
+ 
+
+
+   const urlWhatsApp = `https://api.whatsapp.com/send?phone=&text=Olá, segue infomrações sobre assistencia da ${nomeDoDia,apenasData}`;
+    window.open(urlWhatsApp, "_blank");
+}
+
+botaoGerarTexto.addEventListener('click', abrirWhatsApp)
 
 
 const loop = () => {
     clearInterval(loopId)
     multiplica()
-
+    gerarTexto()
     somaTudo()
     loopId = setTimeout(() => {
         loop()
