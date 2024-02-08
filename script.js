@@ -7,7 +7,7 @@ const dataFormatada = data.toLocaleString('pt-BR'); // data no formato brasileir
 const apenasData = dataFormatada.substring(0, 10)
 var nomeDoDia = data.toLocaleString('pt-BR', { weekday: 'long' }); // nome do dia em português
 
-diplayData.innerText = `Hoje é ${nomeDoDia} ${apenasData}`
+diplayData.innerText = `${nomeDoDia} ${apenasData}`
 
 // assistencia salão
 const botaoMenos = document.getElementById('menos')
@@ -105,7 +105,7 @@ const textoTotalGeral = document.getElementById('text-total-geral')
 const botaoGerarTexto = document.querySelector('.gerar-texto')
 
 function gerarTexto() {
-    dataTexto.innerText = `Hoje é ${nomeDoDia} ${apenasData}`
+    dataTexto.innerText = `${nomeDoDia} ${apenasData}`
     textoTotalSalao.innerText = `Total salão do reino = ${assistenciaSalaoSalva}`
     textoTotalZoom.innerText = `Total zoom = ${resultadoSomaZoom}`
     textoTotalGeral.innerText = `Total: ${totalAssistencia}`

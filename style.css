@@ -312,8 +312,12 @@ button.resultado {
     margin-right: 8px;
 }
 
+/* texto */
+
+
+
 .container-text {
-    margin-top: 10px;
+    margin-top: 10px;   
 }
 
 .gerar-texto {
@@ -331,4 +335,9 @@ button.resultado {
     background-color: #fff;
     color: #000;
     padding: 20px;
+
+}
+
+.container-texto-borda {
+    border: 2px solid #ff0303;
 }
