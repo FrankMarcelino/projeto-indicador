@@ -123,7 +123,7 @@ function gerarTexto() {
 
 
 function abrirWhatsApp() {
-   const urlWhatsApp = `https://api.whatsapp.com/send?phone=&text=Olá, segue informações sobre assistencia da ${nomeDoDia} ${apenasData}%0DTotal salão do reino = ${assistenciaSalaoSalva}%0DTotal zoom = ${resultadoSomaZoom}%0DTotal assistencia = ${totalAssistencia}`;
+   const urlWhatsApp = `https://api.whatsapp.com/send?phone=&text=Olá, segue informações sobre assistencia da *${nomeDoDia} ${apenasData}*%0DTotal salão do reino = ${assistenciaSalaoSalva}%0DTotal zoom = ${resultadoSomaZoom}%0DTotal assistencia = ${totalAssistencia}`;
     window.open(urlWhatsApp, "_blank");
 }
 
