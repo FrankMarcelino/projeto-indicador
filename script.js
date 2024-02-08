@@ -15,14 +15,6 @@ function capitalizeFirstLetter(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-function ajustadoEncodeURIComponent(str) {
-    return encodeURIComponent(str).replace(/[!' ()*]/g, function (c) {
-        return "%" + c.charCodeAt(0).toString(16);
-    });
-}
-
-
-
 // ======
 
 // assistencia salão
@@ -129,14 +121,9 @@ function gerarTexto() {
 
 // enviar via whatsapp
 
-let textoPadrao = `Olá, segue infomrações sobre assistencia da ${nomeDoDia,apenasData}`
-let textoCodificado = encodeURIComponent(textoPadrao)
 
 function abrirWhatsApp() {
- 
-
-
-   const urlWhatsApp = `https://api.whatsapp.com/send?phone=&text=Olá, segue infomrações sobre assistencia da ${nomeDoDia,apenasData}`;
+   const urlWhatsApp = `https://api.whatsapp.com/send?phone=&text=Olá, segue informações sobre assistencia da ${nomeDoDia} ${apenasData}%0DTotal salão do reino = ${assistenciaSalaoSalva}%0DTotal zoom = ${resultadoSomaZoom}%0DTotal assistencia = ${totalAssistencia}`;
     window.open(urlWhatsApp, "_blank");
 }
 
