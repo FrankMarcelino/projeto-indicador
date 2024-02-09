@@ -61,6 +61,10 @@ let loopId
 const inputZoom = document.querySelectorAll('.zoom-input')
 const labelZoom = document.querySelectorAll('.zoom-label')
 
+function validateInput(input) {
+    const value = input.value;
+    input.value = value.replace(/[^0-9]/g, ''); // Remove caracteres não numéricos
+}
 
 const botaoResultado = document.getElementById('resultado')
 let resultadoX = []

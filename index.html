@@ -7,7 +7,10 @@
     <title>Contagem Assistência</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <script src="./script.js" defer></script>
+
+
 </head>
 
 <body>
@@ -62,32 +65,32 @@
                     <div class="contador-zoom">
                         <p>Respostas da enquete:</p>
                         <div>
-                            <input id="x1" class="zoom-input" type="number">
+                            <input id="x1" class="zoom-input"  oninput="validateInput(this)" min="0" type="number">
                             <label id="l1" class="zoom-label" for="text">x 1 = 0</label>
                         </div>
 
                         <div>
-                            <input id="x2" class="zoom-input" type="number">
+                            <input id="x2" class="zoom-input"  oninput="validateInput(this)" min="0" type="number">
                             <label id="l2" class="zoom-label" for="text">x 2 = 0</label>
                         </div>
 
                         <div>
-                            <input id="x3" class="zoom-input" type="number">
+                            <input id="x3" class="zoom-input"  oninput="validateInput(this)" min="0" type="number">
                             <label id="l3" class="zoom-label" for="text">x 3 = 0</label>
                         </div>
 
                         <div>
-                            <input id="x4" class="zoom-input" type="number">
+                            <input id="x4" class="zoom-input"  oninput="validateInput(this)" min="0" type="number">
                             <label id="l4" class="zoom-label" for="text">x 4 = 0</label>
                         </div>
 
                         <div>
-                            <input id="x5" class="zoom-input" type="number">
+                            <input id="x5" class="zoom-input"  oninput="validateInput(this)" min="0" type="number">
                             <label id="l5" class="zoom-label" for="text">x 5 = 0</label>
                         </div>
 
                         <div>
-                            <input id="x6" class="zoom-input" type="number">
+                            <input id="x6" class="zoom-input"  oninput="validateInput(this)" min="0" type="number">
                             <label id="l6" class="zoom-label" for="text">x 6 = 0</label>
                         </div>
                         <button id="resultado" class="resultado">Resultado Zoom</button>
