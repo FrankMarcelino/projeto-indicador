@@ -56,7 +56,7 @@ botaoSalvar.addEventListener('click', salvarAssistenciaSalao)
 
 let loopId
 
-// ========== zoom =========
+// ==========novo codigo do zoom =========
 
 const inputZoom = document.querySelectorAll('.zoom-input')
 const labelZoom = document.querySelectorAll('.zoom-label')
@@ -121,13 +121,18 @@ function gerarTexto() {
 
 // enviar via whatsapp
 
+function enviarMensagemWhatsApp() {
+    const mensagem = `Olá, segue informações sobre assistencia da *${nomeDoDia} ${apenasData}*
+    Total salão do reino: ${assistenciaSalaoSalva}
+    Total Zoom: ${resultadoSomaZoom}
+    Assistencia Total = ${totalAssistencia}`;
 
-function abrirWhatsApp() {
-   const urlWhatsApp = `https://api.whatsapp.com/send?phone=&text=Olá,%20segue%20informações sobre assistencia%20da%20*${nomeDoDia}%20${apenasData}*%0DTotal%20salão%20do%20reino%20=%20${assistenciaSalaoSalva}%0DTotal%20zoom%20=%20${resultadoSomaZoom}%0DTotal%20assistencia%20=%20${totalAssistencia}`;
+    const mensagemCodificada = encodeURIComponent(mensagem);
+    const urlWhatsApp = `https://api.whatsapp.com/send?text=${mensagemCodificada}`;
     window.open(urlWhatsApp, "_blank");
 }
 
-botaoGerarTexto.addEventListener('click', abrirWhatsApp)
+botaoGerarTexto.addEventListener('click', enviarMensagemWhatsApp)
 
 
 const loop = () => {
