@@ -321,7 +321,20 @@ button.resultado {
 
 /* texto */
 
+.container-botoes {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
 
+.copia-texto {
+    display: block;
+    width: 100px;
+    height: 45px;
+    font-weight: bolder;
+    margin: 5px;
+    border-radius: 15px;
+}
 
 .container-text {
     margin-top: 10px;   

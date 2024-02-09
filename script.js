@@ -111,28 +111,42 @@ const textoTotalZoom = document.getElementById('text-total-zoom')
 const textoTotalGeral = document.getElementById('text-total-geral')
 
 const botaoGerarTexto = document.querySelector('.gerar-texto')
+let mensagem = `Olá!`
 
 function gerarTexto() {
     dataTexto.innerText = `${capitalizeFirstLetter(nomeDoDia)} ${apenasData}`
     textoTotalSalao.innerText = `Total salão do reino = ${assistenciaSalaoSalva}`
     textoTotalZoom.innerText = `Total zoom = ${resultadoSomaZoom}`
     textoTotalGeral.innerText = `Total: ${totalAssistencia}`
+
+    mensagem = `Olá, segue informações sobre assistencia da *${nomeDoDia} ${apenasData}*
+    Total salão do reino: ${assistenciaSalaoSalva}
+    Total Zoom: ${resultadoSomaZoom}
+    Assistencia Total = ${totalAssistencia}`;
 }
 
 // enviar via whatsapp
 
-function enviarMensagemWhatsApp() {
-    const mensagem = `Olá, segue informações sobre assistencia da *${nomeDoDia} ${apenasData}*
-    Total salão do reino: ${assistenciaSalaoSalva}
-    Total Zoom: ${resultadoSomaZoom}
-    Assistencia Total = ${totalAssistencia}`;
 
+
+function enviarMensagemWhatsApp() {
     const mensagemCodificada = encodeURIComponent(mensagem);
     const urlWhatsApp = `https://api.whatsapp.com/send?text=${mensagemCodificada}`;
     window.open(urlWhatsApp, "_blank");
 }
 
 botaoGerarTexto.addEventListener('click', enviarMensagemWhatsApp)
+
+// copiar texto
+const botaoCopiarTexto = document.querySelector('.copia-texto')
+
+function copiarTexto() {
+    navigator.clipboard.writeText(mensagem)
+    alert("Copiado o texto: " + mensagem)
+}
+
+botaoCopiarTexto.addEventListener('click', copiarTexto)
+
 
 
 const loop = () => {
