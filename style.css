@@ -367,3 +367,7 @@ button.resultado {
 .container-texto-borda {
     border: 2px solid #ff0303;
 }
+
+#btn-whatsapp {
+    color: #fff;
+}
