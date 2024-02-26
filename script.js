@@ -107,6 +107,15 @@ function somaTudo() {
     totalGeral.innerText = `Total: ${totalAssistencia}`
 }
 
+// function read select option and set reuniao
+const select = document.querySelector('select')
+let reuniao = 'meio'
+select.addEventListener('change', (event) => {
+    reuniao = event.target.value
+})
+
+
+
 // -----------texto padrão -------
 
 const dataTexto = document.getElementById('text-data')
@@ -123,7 +132,8 @@ function gerarTexto() {
     textoTotalZoom.innerText = `Total zoom = ${resultadoSomaZoom}`
     textoTotalGeral.innerText = `Total: ${totalAssistencia}`
 
-    mensagem = `Olá, segue informações sobre assistencia da *${nomeDoDia} ${apenasData}*
+    mensagem = `Olá, segue informações sobre assistencia da renião do ${reuniao} de semana: 
+    *${nomeDoDia} ${apenasData}*
     Total salão do reino: ${assistenciaSalaoSalva}
     Total Zoom: ${resultadoSomaZoom}
     Assistencia Total = ${totalAssistencia}`;
